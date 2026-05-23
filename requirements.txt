@@ -1,0 +1,12 @@
+streamlit
+langchain
+langchain-openai
+langchain-community
+sentence-transformers
+faiss-cpu
+gitpython
+python-dotenv
+tavily-python
+numpy
+torch
+transformers
