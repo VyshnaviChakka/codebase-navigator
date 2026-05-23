@@ -7,7 +7,7 @@ st.title("🔥 AI Codebase Navigator")
 
 repo_url = st.text_input(
     "Enter GitHub Repo URL:",
-    "https://github.com/fastapi/fastapi"
+    "https://github.com/psf/requests"
 )
 
 if "active_repo" not in st.session_state:
