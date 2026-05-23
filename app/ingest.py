@@ -18,7 +18,7 @@ def clone_repo(repo_url, save_base="data"):
     return save_path
 
 
-def load_code_files(repo_path, max_files=2000):
+def load_code_files(repo_path, max_files=300):
     code_files = []
 
     for root, dirs, files in os.walk(repo_path):
@@ -43,7 +43,7 @@ def load_code_files(repo_path, max_files=2000):
     return code_files
 
 
-def chunk_code(code_files, chunk_size=500):
+def chunk_code(code_files, chunk_size=500, max_chunks=2000):
     chunks = []
 
     for code in code_files:
@@ -54,7 +54,7 @@ def chunk_code(code_files, chunk_size=500):
 
 
 if __name__ == "__main__":
-    repo = clone_repo("https://github.com/fastapi/fastapi")
+    repo = clone_repo("https://github.com/psf/requests")
     files = load_code_files(repo)
     chunks = chunk_code(files)
 
